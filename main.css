@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
+/* VARIABLES */
 :root {
   /* fonts */
   --heading-font: 'Roboto Mono', monospace;
@@ -14,6 +15,7 @@
   --orange: #fb6520;
 }
 
+/* RESETS */
 * {
   box-sizing: border-box;
   /* border: 1px solid tomato; */
@@ -29,33 +31,81 @@ ul {
   padding: 0;
 }
 
-/* header */
+/* HEADER */
 .header {
   display: flex;
+  position: fixed;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
 
   background-color: var(--off-black);
   color: var(--pure-white);
+
+  z-index: 10;
 }
 
+/* EARTHRISE INITIATIVE LOGO */
 .header__logo {
   font-family: var(--heading-font);
 }
 
-.header__ul {
-  display: flex;
-  align-items: center;
+/* "MENU" TOGGLE BUTTON */
+.header__button {
+  color: var(--pure-white);
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
 
+/* .header__button:hover,
+.header__button:active {
+  color: var(--turqoise);
+} */
+
+.header__button:active,
+.header__button:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+/* HEADER NAV */
+.header__nav {
+  /* position: fixed; */
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: var(--off-white);
+  transform: translateY(-100%);
+  transition: transform 300ms ease-out;
+}
+
+.header__ul {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header__li {
-  padding: 0.5rem 1rem;
+  font-family: var(--heading-font);
+  padding: 1rem;
 }
 
-.header__li:hover {
+.header__li a {
+  color: var(--off-black);
+  text-decoration: none;
+}
+
+.header__li a:hover,
+.header__li a:active {
   cursor: pointer;
-  color: var(--turqoise);
+}
+
+.open {
+  display: block !important;
+  transform: translateY(0);
 }
