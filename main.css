@@ -72,9 +72,9 @@ ul {
 
 /* HEADER NAV */
 .header__nav {
-  /* position: fixed; */
+  position: fixed;
   width: 100%;
-  z-index: 1;
+  /* z-index: 1; */
   top: 0;
   left: 0;
   padding: 1rem;
@@ -108,4 +108,20 @@ ul {
 .open {
   display: block !important;
   transform: translateY(0);
+}
+
+.hero__bg {
+  /* max-width: $xl-screen; */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 32rem;
+  /* margin: auto; */
+  background: var(--off-black) url('./media/ei/earthrise-hero-bg.png') no-repeat
+    70% 1rem;
+  background-size: cover;
+}
+
+.hero__nav-arrow {
+  margin-left: 0.5rem;
 }
