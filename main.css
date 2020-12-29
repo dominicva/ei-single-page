@@ -21,6 +21,10 @@
   /* border: 1px solid tomato; */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: var(--body-font);
@@ -105,23 +109,56 @@ ul {
   cursor: pointer;
 }
 
+/* OPEN UTIL CLASS FOR ANIMATIONS */
 .open {
   display: block !important;
   transform: translateY(0);
 }
 
+/* EARTHRISE HERO BG */
 .hero__bg {
-  /* max-width: $xl-screen; */
   display: flex;
   align-items: center;
   width: 100%;
   height: 32rem;
-  /* margin: auto; */
   background: var(--off-black) url('./media/ei/earthrise-hero-bg.png') no-repeat
     70% 1rem;
   background-size: cover;
 }
 
+/* WHITE NAV DOWN ARROW */
 .hero__nav-arrow {
   margin-left: 0.5rem;
+}
+
+/* MISSION */
+.hero__mission {
+  background-color: var(--off-black);
+  height: 26rem;
+  margin: auto;
+  padding: 2rem;
+  position: relative;
+}
+
+.mission__statement {
+  font-family: var(--heading-font);
+  color: var(--pure-white);
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin: auto;
+  /* transform: translateY(-100%); */
+  opacity: 0;
+  animation: 1s cubic-bezier(0.26, 1, 0.48, 1) 1.5s 1 normal forwards title-in;
+}
+
+@keyframes title-in {
+  0% {
+    opacity: 0;
+    transform: translateY(130px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
