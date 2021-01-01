@@ -1,23 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap');
-
-/* VARIABLES */
-:root {
-  /* fonts */
-  --heading-font: 'Roboto Mono', monospace;
-  --body-font: 'Roboto', sans-serif;
-
-  /* colors */
-  --off-black: #1f1f1f;
-  --off-white: #eef2f1;
-  --pure-white: #fff;
-  --turqoise: #2cdec0;
-  --orange: #fb6520;
-
-  /* animation timing functions */
-  --slide-up: cubic-bezier(0.26, 1, 0.48, 1);
-}
-
 /* RESETS */
 * {
   box-sizing: border-box;
@@ -38,166 +18,17 @@ ul {
   padding: 0;
 }
 
-/* HEADER */
-.header {
-  display: flex;
-  position: fixed;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-
-  background-color: var(--off-black);
-  color: var(--pure-white);
-
-  z-index: 10;
-}
-
-/* EARTHRISE INITIATIVE LOGO */
-.header__logo {
-  font-family: var(--heading-font);
-}
-
-/* "MENU" TOGGLE BUTTON */
-.header__button {
-  color: var(--pure-white);
-  background-color: transparent;
-  border-color: transparent;
-  cursor: pointer;
-}
-
-/* .header__button:hover,
-.header__button:active {
-  color: var(--turqoise);
-} */
-
-.header__button:active,
-.header__button:focus {
-  outline-color: transparent;
-  outline-style: none;
-}
-
-/* HEADER NAV */
-.header__nav {
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: var(--off-white);
-  transform: translateY(-100%);
-  transition: transform 300ms ease-out;
-}
-
-.header__ul {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.header__li {
-  font-family: var(--heading-font);
-  padding: 1rem;
-}
-
-.header__li a {
-  color: var(--off-black);
-  text-decoration: none;
-}
-
-.header__li a:hover,
-.header__li a:active {
-  cursor: pointer;
-}
-
-/* OPEN UTIL CLASS FOR ANIMATIONS */
-.open {
-  display: block !important;
-  transform: translateY(0);
-}
-
-/* EARTHRISE HERO BG */
-.hero__bg {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 32rem;
-  background: var(--off-black) url('./media/ei/earthrise-hero-bg.png') no-repeat
-    70% 1rem;
-  background-size: cover;
-}
-
-/* WHITE NAV DOWN ARROW */
-.hero__nav-arrow {
-  margin-left: 0.5rem;
-}
-
-/* MISSION */
-.hero__mission {
-  background-color: var(--off-black);
-  height: 38rem;
-  margin: auto;
-  padding: 2rem;
-  position: relative;
-}
-
-.mission__statement {
-  font-family: var(--heading-font);
-  color: var(--pure-white);
-  font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 2rem;
-  margin: auto;
-  /* transform: translateY(-100%); */
-  opacity: 0;
-  animation: 1s cubic-bezier(0.26, 1, 0.48, 1) 1.5s 1 normal forwards title-in;
-}
-
-.mission__title,
-.mission__text {
-  font-family: var(--body-font);
-  color: var(--pure-white);
-}
-
-.mission__title {
-  display: block;
-  font-family: var(--heading-font);
-  font-size: 1.25rem;
-  margin-top: 5rem;
-  opacity: 0;
-  transform: translateY(10rem);
-  animation-name: effects-system-up;
-  animation-delay: 2.5s;
-  animation-duration: 1s;
-  animation-timing-function: var(--slide-up);
-  animation-fill-mode: forwards;
-  animation-direction: normal;
-}
-
-.mission__text {
-  display: block;
-  font-size: 14px;
-  line-height: 1.5rem;
-  margin-top: 1.5rem;
-  opacity: 0;
-  transform: translateY(10rem);
-  animation-name: effects-system-up;
-  animation-delay: 3.5s;
-  animation-duration: 1s;
-  animation-timing-function: var(--slide-up);
-  animation-fill-mode: forwards;
-  animation-direction: normal;
-}
-
 .beacon {
   background-color: var(--orange);
-  color: var(--off-white);
+  color: var(--off-black);
   padding: 1rem;
   width: 50%;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 1.25rem;
   text-align: center;
-  text-transform: capitalize;
+  text-transform: uppercase;
   position: absolute;
   top: 0;
   left: 0;
@@ -206,26 +37,4 @@ ul {
 .projects {
   height: 30rem;
   position: relative;
-}
-
-@keyframes title-in {
-  0% {
-    opacity: 0;
-    transform: translateY(130px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-
-@keyframes effects-system-up {
-  0% {
-    opacity: 0;
-    transform: translateY(10rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0rem);
-  }
 }
