@@ -13,6 +13,9 @@
   --pure-white: #fff;
   --turqoise: #2cdec0;
   --orange: #fb6520;
+
+  /* animation timing functions */
+  --slide-up: cubic-bezier(0.26, 1, 0.48, 1);
 }
 
 /* RESETS */
@@ -78,7 +81,7 @@ ul {
 .header__nav {
   position: fixed;
   width: 100%;
-  /* z-index: 1; */
+  z-index: 1;
   top: 0;
   left: 0;
   padding: 1rem;
@@ -134,7 +137,7 @@ ul {
 /* MISSION */
 .hero__mission {
   background-color: var(--off-black);
-  height: 26rem;
+  height: 38rem;
   margin: auto;
   padding: 2rem;
   position: relative;
@@ -152,6 +155,59 @@ ul {
   animation: 1s cubic-bezier(0.26, 1, 0.48, 1) 1.5s 1 normal forwards title-in;
 }
 
+.mission__title,
+.mission__text {
+  font-family: var(--body-font);
+  color: var(--pure-white);
+}
+
+.mission__title {
+  display: block;
+  font-family: var(--heading-font);
+  font-size: 1.25rem;
+  margin-top: 5rem;
+  opacity: 0;
+  transform: translateY(10rem);
+  animation-name: effects-system-up;
+  animation-delay: 2.5s;
+  animation-duration: 1s;
+  animation-timing-function: var(--slide-up);
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+.mission__text {
+  display: block;
+  font-size: 14px;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  opacity: 0;
+  transform: translateY(10rem);
+  animation-name: effects-system-up;
+  animation-delay: 3.5s;
+  animation-duration: 1s;
+  animation-timing-function: var(--slide-up);
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+.beacon {
+  background-color: var(--orange);
+  color: var(--off-white);
+  padding: 1rem;
+  width: 50%;
+  text-align: center;
+  text-transform: capitalize;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.projects {
+  height: 30rem;
+  position: relative;
+}
+
 @keyframes title-in {
   0% {
     opacity: 0;
@@ -160,5 +216,16 @@ ul {
   100% {
     opacity: 1;
     transform: translateY(0%);
+  }
+}
+
+@keyframes effects-system-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
   }
 }
