@@ -5,7 +5,8 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1.5rem;
+  /* height: 5rem; */
 
   background-color: var(--off-black);
   color: var(--pure-white);

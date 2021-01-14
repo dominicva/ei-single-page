@@ -1,3 +1,6 @@
+.hero {
+  position: relative;
+}
 /* EARTHRISE HERO BG */
 .hero__bg {
   display: flex;
@@ -24,6 +27,7 @@
 }
 
 .mission__statement {
+  will-change: transform, opacity;
   font-family: var(--heading-font);
   color: var(--pure-white);
   font-weight: 400;
@@ -41,6 +45,7 @@
 }
 
 .mission__title {
+  will-change: transform, opacity;
   display: block;
   font-family: var(--heading-font);
   font-size: 1.25rem;
@@ -56,6 +61,7 @@
 }
 
 .mission__text {
+  will-change: transform, opacity;
   display: block;
   font-size: 14px;
   line-height: 1.5rem;

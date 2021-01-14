@@ -22,15 +22,16 @@ ul {
   background-color: var(--orange);
   color: var(--off-black);
   padding: 1rem;
-  width: 50%;
+  width: 14rem;
   font-size: 0.75rem;
+  font-feature-settings: 'liga';
   font-weight: 500;
   letter-spacing: 0.5px;
   line-height: 1.25rem;
   text-align: center;
   text-transform: uppercase;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
 }
 
