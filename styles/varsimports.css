@@ -6,6 +6,7 @@
   /* fonts */
   --heading-font: 'Roboto Mono', monospace;
   --body-font: 'Roboto', sans-serif;
+  --liga-setting: 'liga' 1;
 
   /* colors */
   /* --off-black: #1f1f1f; */
@@ -13,9 +14,11 @@
   --off-white: #eef2f1;
   --pure-white: #fff;
   --turqoise: #2cdec0;
+  --x-turqoise: #00bfa5;
   /* --orange: #fb6520; */
   --orange: #ffb300;
 
   /* animation timing functions */
   --slide-up: cubic-bezier(0.26, 1, 0.48, 1);
+  --border-fade-in: cubic-bezier(0.32, 0.94, 0.6, 1);
 }
