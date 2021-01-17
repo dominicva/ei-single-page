@@ -35,7 +35,8 @@
   line-height: 2rem;
   margin: auto;
   opacity: 0;
-  animation: 1s cubic-bezier(0.26, 1, 0.48, 1) 1.5s 1 normal forwards title-in;
+  /* animation-delay: 0.5; */
+  /* animation: 1s cubic-bezier(0.26, 1, 0.48, 1) 1.5s 1 normal forwards title-in; */
 }
 
 .mission__title,
@@ -49,15 +50,18 @@
   display: block;
   font-family: var(--heading-font);
   font-size: 1.25rem;
+  font-weight: 400;
   margin-top: 5rem;
   opacity: 0;
   transform: translateY(10rem);
-  animation-name: effects-system-up;
+  /* animation-delay: 1.5; */
+
+  /* animation-name: effects-system-up;
   animation-delay: 2.5s;
   animation-duration: 1s;
   animation-timing-function: var(--slide-up);
   animation-fill-mode: forwards;
-  animation-direction: normal;
+  animation-direction: normal; */
 }
 
 .mission__text {
@@ -68,8 +72,18 @@
   margin-top: 1.5rem;
   opacity: 0;
   transform: translateY(10rem);
-  animation-name: effects-system-up;
+  /* animation-delay: 2.5; */
+  /* animation-name: effects-system-up;
   animation-delay: 3.5s;
+  animation-duration: 1s;
+  animation-timing-function: var(--slide-up);
+  animation-fill-mode: forwards;
+  animation-direction: normal; */
+}
+
+.slide-in--up {
+  animation-name: effects-system-up;
+  animation-delay: 0.5s;
   animation-duration: 1s;
   animation-timing-function: var(--slide-up);
   animation-fill-mode: forwards;

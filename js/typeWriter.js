@@ -16,15 +16,15 @@ const typeWriter = () => {
   }
 };
 
-// list of observer options
+// list oftypeWriterOobserver options
 const options = {
   root: null,
   rootMargin: '0px 0px -100px 0px', // NB negative margin
   threshold: 0,
 };
 
-// instantiate a new Intersection Observer
-export const observer = new IntersectionObserver(entries => {
+// instantiate a new IntersectiontypeWriterOObserver
+export const typeWriterObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.intersectionRatio == 1) {
       typeWriter();
