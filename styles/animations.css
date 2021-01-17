@@ -19,3 +19,12 @@
     transform: translateY(0rem);
   }
 }
+
+@keyframes textIn {
+  0% {
+    background-position: 200%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
