@@ -1,4 +1,4 @@
-import { projectsHeader, typeWriterObserver } from './js/typeWriter';
+import { projectsHeaderTitle, typeWriterObserver } from './js/typeWriter';
 import {
   missionStatementEl,
   missionStatementObserver,
@@ -6,16 +6,16 @@ import {
   missionTitleObserver,
   missionTextEl,
   missionTextObserver,
-} from './js/slideIns';
+} from './js/heroSlideIns';
 
 import('./js/header').then(header => {
   header.toggleMenuHandler();
 });
 
-typeWriterObserver.observe(projectsHeader);
-
+// HERO SECTION INTERSECTION OBSERVERS
 missionStatementObserver.observe(missionStatementEl);
 missionTitleObserver.observe(missionTitleEl);
 missionTextObserver.observe(missionTextEl);
 
-console.log('hello, world!');
+// PROJECTS SECTION INTERSECTION OBSERVERS
+typeWriterObserver.observe(projectsHeaderTitle);

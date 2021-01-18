@@ -28,3 +28,12 @@
     background-position: 0%;
   }
 }
+
+@keyframes image-loaded {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

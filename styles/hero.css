@@ -69,7 +69,6 @@
 
 .slide-in--up {
   animation-name: effects-system-up;
-  animation-delay: 0.2s;
   animation-duration: 1s;
   animation-timing-function: var(--slide-up);
   animation-fill-mode: forwards;
