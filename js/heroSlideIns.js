@@ -20,7 +20,6 @@ const missionTextOptions = missionStatementOptions;
 // instantiate a Intersection Observers
 export const missionStatementObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    // entry.target.style.animationDelay = '0.1s';
     entry.target.classList.add('slide-in--up');
   });
 }, missionStatementOptions);

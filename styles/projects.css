@@ -56,10 +56,6 @@
   animation: effects-system-up 0.5s var(--slide-up) 1s forwards normal;
 }
 
-.project-grid__image {
-  background-color: var(--off-white);
-}
-
 .project-grid__content {
   padding: 2rem 0;
   position: relative;
@@ -108,4 +104,22 @@
   font-weight: 500;
   font-family: var(--heading-font);
   font-feature-settings: var(--liga-setting);
+}
+
+.project-grid__image__parallaxer {
+  overflow: hidden;
+}
+
+.project-grid__image__image {
+  transform: translateY(200%);
+}
+
+.image-slide-in--up {
+  animation-name: image-up;
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-timing-function: var(--slide-up);
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }

@@ -37,3 +37,12 @@
     opacity: 1;
   }
 }
+
+@keyframes image-up {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
