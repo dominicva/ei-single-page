@@ -4,14 +4,25 @@
   /* border: 1px solid tomato; */
 }
 
+*:focus {
+  /* outline: 0px; */
+  outline: 2px solid var(--orange);
+  outline-offset: 5px;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
   margin: 0;
+  padding: 0;
   font-family: var(--body-font);
   color: var(--off-black);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-feature-settings: var(--liga-setting);
 }
 
 ul {

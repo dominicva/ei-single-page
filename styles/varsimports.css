@@ -3,10 +3,16 @@
 
 /* VARIABLES */
 :root {
-  /* fonts */
+  /* 
+  FONTS 
+  */
+  /* styles */
   --heading-font: 'Roboto Mono', monospace;
-  --body-font: 'Roboto', sans-serif;
+  --body-font: 'Roboto', Arial, Verdana, sans-serif;
   --liga-setting: 'liga' 1;
+  /* sizes */
+  --base-font-size: 0.875rem;
+  --base-line-height: 1.5rem;
 
   /* colors */
   /* --off-black: #1f1f1f; */

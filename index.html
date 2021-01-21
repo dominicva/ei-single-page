@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/hero.css" />
     <link rel="stylesheet" href="styles/projects.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
@@ -1235,7 +1236,67 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__grid">
+          <div class="footer__logo">earthrise initiative</div>
+          <nav class="footer__nav">
+            <div class="footer__links">
+              <a class="footer__link" href="#">projects</a>
+              <a class="footer__link" href="#">about</a>
+              <a class="footer__link" href="#">contact</a>
+            </div>
+          </nav>
+          <div class="footer__form-section">
+            <form class="footer__form">
+              <div class="footer__email">
+                <label class="footer__email-label" for="email-input"
+                  >enter your email to receive the earthrise initiative
+                  newsletter</label
+                >
+                <input
+                  class="footer__email-input"
+                  type="email"
+                  placeholder="ENTER YOUR EMAIL"
+                  maxlength="250"
+                  pattern="[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+                />
+              </div>
+              <button
+                class="footer__email-submit"
+                id="form-submit"
+                type="submit"
+              >
+                submit
+              </button>
+            </form>
+            <div class="footer__error">
+              <p class="error-text">
+                Sorry, an error occurred! Please ensure that your email address
+                is valid.
+              </p>
+            </div>
+            <div class="footer__thanks">
+              <p class="body">Thank you for signing up!</p>
+            </div>
+            <div class="footer__disclaimer">
+              <p class="body">
+                You will be able to opt-out of these emails at any time. By
+                signing up, you understand that the information you provide is
+                subject to Earthrise Initiative's
+                <a target="_blank" href="#">privacy policy and terms</a>.
+              </p>
+            </div>
+            <div class="footer__copyright">
+              <span
+                >Copyright © 2021 | Earthrise Initiative | All rights
+                reserved.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="./index.js"></script>
   </body>
 </html>

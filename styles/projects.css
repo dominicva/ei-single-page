@@ -1,5 +1,4 @@
 .projects {
-  height: 30rem;
   position: relative;
   padding: 0 1.5rem;
 }
@@ -111,7 +110,7 @@
 }
 
 .project-grid__image__image {
-  transform: translateY(200%);
+  transform: translateY(110%);
 }
 
 .image-slide-in--up {
