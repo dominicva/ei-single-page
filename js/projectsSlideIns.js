@@ -1,6 +1,10 @@
 // NB to be converted to querySelectorAll when more images added
+// export const projectImageParallaxer = document.querySelector(
+//   '.project-grid__image__parallaxer'
+// );
+
 export const projectImageParallaxer = document.querySelector(
-  '.project-grid__image__parallaxer'
+  '.image-background-image-sizer'
 );
 
 const projectGridImageOptions = {

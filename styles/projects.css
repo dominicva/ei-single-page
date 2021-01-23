@@ -43,9 +43,9 @@
 .project-grid__grid__item__inner {
   position: relative;
   overflow: hidden;
-  /* height: 100%; */
-  /* display: flex; */
-  /* flex-direction: column; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 4rem;
   margin-top: 4rem;
   text-decoration: none;
@@ -172,12 +172,37 @@
   font-feature-settings: var(--liga-setting);
 }
 
-.project-grid__image__parallaxer {
+/* PROJECT IMAGE */
+.project-grid__image {
+  /* empty */
+}
+
+.image-parallaxer {
   overflow: hidden;
 }
 
-.project-grid__image__image {
+.image-parallaxer__inner {
+  transform: translateY(var(--image-y)) scale(var(--image-scale));
+  will-change: transform;
+}
+
+.image-background-image-sizer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+#image__khan-academy {
+  background-image: url('../media/projects/khan-academy-logo.svg');
+}
+
+.image {
   transform: translateY(110%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  width: 100%;
+  height: 12rem;
 }
 
 .image-slide-in--up {
