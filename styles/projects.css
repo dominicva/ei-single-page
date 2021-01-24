@@ -25,11 +25,13 @@
     grid-template-columns: 1fr 1fr;
     width: calc(100% - (80px * 2));
     max-width: 1272px;
+    margin-top: 3rem;
   }
 }
 
 .project-grid__grid-item-container {
   position: relative;
+  height: 35rem;
 }
 
 .project-grid__grid__item,
@@ -38,6 +40,7 @@
   position: relative;
   border: 2px solid transparent;
   transition: 0.5s border var(--border-fade-in);
+  height: 100%;
 }
 
 .project-grid__grid__item__inner {
@@ -48,6 +51,13 @@
   flex-direction: column;
   margin-bottom: 4rem;
   text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+  .project-grid__grid__item__inner {
+    display: block;
+    margin-bottom: 0;
+  }
 }
 
 .project-grid__header {
@@ -104,7 +114,22 @@
   padding: 2rem 0;
   position: relative;
   width: 100%;
+  height: 100%;
   order: 2;
+}
+
+@media (min-width: 1024px) {
+  .project-grid__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 48px);
+    height: calc(100% - 24px - 20px);
+    padding: 24px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    color: #0f0f0f;
+  }
 }
 
 .project-grid__content__headline {
@@ -173,30 +198,34 @@
 
 /* PROJECT IMAGE */
 .project-grid__image {
+  height: 100%;
   /* empty */
 }
 
 .image-parallaxer {
+  height: 100%;
   overflow: hidden;
 }
 
 .image-parallaxer__inner {
   transform: translateY(var(--image-y)) scale(var(--image-scale));
   will-change: transform;
+  height: 100%;
 }
 
 .image-background-image-sizer {
   position: relative;
   width: 100%;
   overflow: hidden;
+  height: 100%;
 }
 
-.image-background-image-sizer:before {
+/* .image-background-image-sizer:before {
   display: block;
   content: '';
   width: 100%;
   padding-top: 100%;
-}
+} */
 
 #image__khan-academy {
   background-image: url('../media/projects/khan-academy-logo.svg');
@@ -209,6 +238,7 @@
   background-position-x: center;
   width: 100%;
   height: 12rem;
+  height: 100%;
 }
 
 .image-slide-in--up {
