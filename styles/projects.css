@@ -47,7 +47,6 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 4rem;
-  margin-top: 4rem;
   text-decoration: none;
 }
 
@@ -190,6 +189,13 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+}
+
+.image-background-image-sizer:before {
+  display: block;
+  content: '';
+  width: 100%;
+  padding-top: 100%;
 }
 
 #image__khan-academy {
