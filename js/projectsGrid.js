@@ -21,3 +21,27 @@ export const projectContentBody = document.querySelector(
 export const projectContentCta = document.querySelector(
   '.project-grid__content__cta'
 );
+
+/* 
+display | all
+position | all
+top | headline
+padding-left | all
+padding-right | cta 
+width | cta
+opacity | all
+bottom | body, cta
+*/
+
+const setElCssProps = (element, props) => {
+  for (const prop in props) {
+    element.style[prop] = props[prop];
+  }
+};
+
+const projectHoverHandler = () => {
+  if (window.innerWidth >= 1024) {
+    setElCssProps(gridItem, { borderColor: '#ffb300' });
+    setElCssProps(projectImage, { opacity: '0' });
+  }
+};
