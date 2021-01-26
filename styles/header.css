@@ -1,22 +1,47 @@
 /* HEADER */
-.header {
+.header__container {
   display: flex;
   position: fixed;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
-  /* height: 5rem; */
-
   background-color: var(--off-black);
   color: var(--pure-white);
-
   z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .header__container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 
 /* EARTHRISE INITIATIVE LOGO */
 .header__logo {
   font-family: var(--heading-font);
+}
+
+@media (min-width: 768px) {
+  .header__logo {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__logo {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
 }
 
 /* "MENU" TOGGLE BUTTON */
@@ -33,6 +58,13 @@
   outline-style: none;
 }
 
+@media (min-width: 768px) {
+  .header__button {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
 /* HEADER NAV */
 .header__nav {
   position: fixed;
@@ -40,22 +72,56 @@
   z-index: 1;
   top: 0;
   left: 0;
-  padding: 1rem;
+  padding: 2rem 1.5rem 3rem 1.5rem;
   background-color: var(--off-white);
   transform: translateY(-100%);
   transition: transform 300ms ease-out;
+  margin-top: 71px;
+}
+
+@media (min-width: 768px) {
+  .header__nav {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__nav {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+.header__ul__group__title {
+  font-family: var(--heading-font);
+  font-feature-settings: var(--liga-setting);
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: var(--orange);
+  font-weight: 500;
+  margin-bottom: 2rem;
 }
 
 .header__ul {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .header__li {
-  font-family: var(--heading-font);
-  padding: 1rem;
+  /* font-family: var(--heading-); */
+  /* padding: 1rem; */
+  font-size: 30px;
+  line-height: 48px;
+  padding-bottom: clamp(10px, 5vh, 48px);
+}
+
+.header__li:last-of-type {
+  padding-bottom: 0;
 }
 
 .header__li a {
