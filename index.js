@@ -25,9 +25,13 @@ import {
 
 import { emailInputPlaceholderHandler } from './js/footer';
 
+import { lastScroll, headerScrollHandler } from './js/headerScroll';
 import('./js/header').then(header => {
   header.toggleMenuHandler();
 });
+
+// HEADER SCROLL
+window.addEventListener('scroll', headerScrollHandler);
 
 // HERO SECTION INTERSECTION OBSERVERS
 missionStatementObserver.observe(missionStatementEl);
