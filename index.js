@@ -23,6 +23,8 @@ import {
   projectMouseLeaveHandler,
 } from './js/projectsGrid';
 
+import { emailInputPlaceholderHandler } from './js/footer';
+
 import('./js/header').then(header => {
   header.toggleMenuHandler();
 });
@@ -40,3 +42,6 @@ projectImageParallaxerObserver.observe(projectImageParallaxer);
 
 gridItemContainer.addEventListener('mouseenter', projectMouseEnterHandler);
 gridItemContainer.addEventListener('mouseleave', projectMouseLeaveHandler);
+
+window.addEventListener('resize', emailInputPlaceholderHandler);
+window.addEventListener('load', emailInputPlaceholderHandler);
