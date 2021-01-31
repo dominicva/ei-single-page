@@ -11,7 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "parcel": "^1.12.4"
+    "parcel": "^1.12.4",
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"

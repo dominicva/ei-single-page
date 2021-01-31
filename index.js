@@ -1,4 +1,10 @@
+// import smoothscroll from 'smoothscroll-polyfill';
+// smoothscroll.polyfill();
+
 import { projectsHeaderTitle, typeWriterObserver } from './js/typeWriter';
+
+// import { heroNavArrow, navArrowHandler } from './js/heroNavArrow';
+
 import {
   missionStatementEl,
   missionStatementObserver,
@@ -7,10 +13,12 @@ import {
   missionTextEl,
   missionTextObserver,
 } from './js/heroSlideIns';
+
 import {
   projectImageParallaxer,
   projectImageParallaxerObserver,
 } from './js/projectsSlideIns';
+
 import {
   gridItemContainer,
   gridItem,
@@ -23,7 +31,7 @@ import {
   projectMouseLeaveHandler,
 } from './js/projectsGrid';
 
-import { emailInputPlaceholderHandler } from './js/footer';
+// import { emailInputPlaceholderHandler } from './js/footer';
 
 import { lastScroll, headerScrollHandler } from './js/headerScroll';
 import('./js/header').then(header => {
@@ -32,6 +40,9 @@ import('./js/header').then(header => {
 
 // HEADER SCROLL
 window.addEventListener('scroll', headerScrollHandler);
+
+// HERO NAV ARROW SMOOTH SCROLL
+// heroNavArrow.addEventListener('click', navArrowHandler);
 
 // HERO SECTION INTERSECTION OBSERVERS
 missionStatementObserver.observe(missionStatementEl);

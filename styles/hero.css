@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: calc(100vh - 4.5rem);
+  height: calc(100vh - 12rem);
   /* height: 46.2rem; */
   background: var(--off-black) url('../media/ei/earthrise-hero-bg.png')
     no-repeat 70% 2rem;
@@ -40,6 +40,7 @@
   margin: auto;
   /* padding: 2rem; */
   position: relative;
+  padding-top: 0.25rem;
 }
 
 @media (min-width: 768px) {
