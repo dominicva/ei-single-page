@@ -9,7 +9,7 @@
   background-color: var(--off-black);
   color: var(--pure-white);
   z-index: 10;
-  transition: 0.5s transform var(--slide-up);
+  transition: 0.65s transform var(--slide-up);
 }
 
 @media (min-width: 768px) {
