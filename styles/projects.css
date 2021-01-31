@@ -143,8 +143,8 @@
   padding: 2rem 0;
   position: relative;
   width: 100%;
-  height: 100%;
-  order: 2;
+  height: 50%;
+  /* order: 2; */
 }
 
 @media (min-width: 1024px) {
@@ -271,7 +271,7 @@
 
 /* PROJECT IMAGE */
 .project-grid__image {
-  height: 100%;
+  height: 50%;
   transition: 0.25s opacity var(--slide-up);
 }
 
