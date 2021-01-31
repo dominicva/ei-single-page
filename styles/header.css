@@ -48,6 +48,7 @@
 /* "MENU" TOGGLE BUTTON */
 .header__button {
   color: var(--pure-white);
+  font-size: var(--base-font-size);
   background-color: transparent;
   border-color: transparent;
   cursor: pointer;
