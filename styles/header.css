@@ -29,6 +29,7 @@
 /* EARTHRISE INITIATIVE LOGO */
 .header__logo {
   font-family: var(--heading-font);
+  color: var(--pure-white);
 }
 
 @media (min-width: 768px) {
