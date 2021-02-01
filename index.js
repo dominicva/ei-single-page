@@ -1,9 +1,4 @@
-// import smoothscroll from 'smoothscroll-polyfill';
-// smoothscroll.polyfill();
-
 import { projectsHeaderTitle, typeWriterObserver } from './js/typeWriter';
-
-// import { heroNavArrow, navArrowHandler } from './js/heroNavArrow';
 
 import {
   missionStatementEl,
@@ -34,15 +29,21 @@ import {
 // import { emailInputPlaceholderHandler } from './js/footer';
 
 import { lastScroll, headerScrollHandler } from './js/headerScroll';
-import('./js/header').then(header => {
-  header.toggleMenuHandler();
-});
+
+import { toggleMenuHandler, navItems, headerNav } from './js/header';
+
+// HEADER MENU TOGGLE BUTTON FUNCTIONALITY
+toggleMenuHandler();
 
 // HEADER SCROLL
 window.addEventListener('scroll', headerScrollHandler);
 
-// HERO NAV ARROW SMOOTH SCROLL
-// heroNavArrow.addEventListener('click', navArrowHandler);
+// CLOSE HEADER NAV ON CLICKING NAV ITEM
+for (const navItem of navItems) {
+  navItem.addEventListener('click', () => {
+    headerNav.classList.remove('open');
+  });
+}
 
 // HERO SECTION INTERSECTION OBSERVERS
 missionStatementObserver.observe(missionStatementEl);

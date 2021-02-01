@@ -1,4 +1,9 @@
 /* HEADER */
+.header {
+  background-color: var(--off-black);
+  width: 100%;
+}
+
 .header__container {
   display: flex;
   position: fixed;
@@ -116,8 +121,6 @@
 }
 
 .header__li {
-  /* font-family: var(--heading-); */
-  /* padding: 1rem; */
   font-size: 30px;
   line-height: 48px;
   padding-bottom: clamp(10px, 5vh, 48px);
