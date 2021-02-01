@@ -120,7 +120,9 @@
   transition: 0.1s color ease-out;
 }
 
-.footer__link:hover {
+.footer__link:hover,
+.footer__link:active,
+.footer__link:focus {
   color: var(--orange);
 }
 
