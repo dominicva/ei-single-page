@@ -30,7 +30,7 @@ import {
 
 import { lastScroll, headerScrollHandler } from './js/headerScroll';
 
-import { toggleMenuHandler, navItems, headerNav } from './js/header';
+import { headerBtn, toggleMenuHandler, navItems, headerNav } from './js/header';
 
 // HEADER MENU TOGGLE BUTTON FUNCTIONALITY
 toggleMenuHandler();
@@ -42,6 +42,7 @@ window.addEventListener('scroll', headerScrollHandler);
 for (const navItem of navItems) {
   navItem.addEventListener('click', () => {
     headerNav.classList.remove('open');
+    headerBtn.textContent = 'Menu';
   });
 }
 
