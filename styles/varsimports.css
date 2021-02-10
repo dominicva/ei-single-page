@@ -22,7 +22,8 @@
   --turqoise: #2cdec0;
   --x-turqoise: #00bfa5;
   /* --orange: #fb6520; */
-  --orange: #ffb300;
+  --orange: #0053d6;
+  /* --orange: #ffb300; */
 
   /* animation timing functions */
   --slide-up: cubic-bezier(0.26, 1, 0.48, 1);

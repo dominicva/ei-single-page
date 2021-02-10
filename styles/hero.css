@@ -1,17 +1,9 @@
 .hero {
   position: relative;
   background-color: var(--off-black);
-  /* width: calc(100% - 48px); */
   max-width: 1272px;
   margin: auto;
 }
-
-/* @media (min-width: 768px) {
-  .hero {
-    width: calc(100% - (32px * 2));
-    max-width: 1368px;
-  }
-} */
 
 .hero__container {
   background-color: var(--off-black);
@@ -22,7 +14,6 @@
   align-items: center;
   width: 100%;
   height: calc(100vh - 12rem);
-  /* height: 46.2rem; */
   background: var(--off-black) url('../media/ei/earthrise-hero-bg.png')
     no-repeat 70% 2rem;
   background-size: cover;
@@ -38,7 +29,6 @@
   background-color: var(--off-black);
   width: calc(100% - 3rem);
   margin: auto;
-  /* padding: 2rem; */
   position: relative;
   padding-top: 0.25rem;
 }
@@ -85,11 +75,6 @@
   }
 }
 
-/* @media (min-width: 1024px) {
-  .mission__statement {
-  }
-} */
-
 @media (min-width: 1200px) {
   .mission__statement {
     font-size: 3.75rem;
@@ -111,7 +96,6 @@
 
 .two-column-text__grid {
   --grid-side: 1.5rem;
-  /* width: calc(100% - 3rem); */
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -121,7 +105,6 @@
 @media (min-width: 768px) {
   .two-column-text__grid {
     --grid-side: 32px;
-    /* width: calc(100% - (32px * 2)); */
     max-width: 1368px;
     grid-template-columns: repeat(8, 1fr);
     grid-column-gap: 24px;
@@ -131,7 +114,6 @@
 @media (min-width: 1024px) {
   .two-column-text__grid {
     --grid-side: 32px;
-    /* width: calc(100% - (80px * 2)); */
     max-width: 1272px;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 24px;
@@ -167,7 +149,6 @@
   font-size: 1.25rem;
   font-weight: 400;
   margin-top: 5rem;
-  /* margin-bottom: 1.5rem; */
   margin-block-end: 0;
   opacity: 0;
   transform: translateY(10rem);

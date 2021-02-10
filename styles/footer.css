@@ -117,13 +117,13 @@
   font-feature-settings: var(--liga-setting);
   font-weight: 400;
   letter-spacing: 0.3px;
-  transition: 0.1s color ease-out;
+  transition: 0.1s opacity ease-out;
 }
 
 .footer__link:hover,
 .footer__link:active,
 .footer__link:focus {
-  color: var(--orange);
+  opacity: 0.87;
 }
 
 .footer__form-section {

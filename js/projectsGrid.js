@@ -30,7 +30,8 @@ const setElCssProps = (element, props) => {
 
 export const projectMouseEnterHandler = () => {
   if (window.innerWidth >= 1024) {
-    setElCssProps(gridItem, { borderColor: '#ffb300' });
+    setElCssProps(gridItem, { borderColor: '#0053d6' });
+    // setElCssProps(gridItem, { borderColor: '#ffb300' });
     setElCssProps(projectImage, { opacity: '0' });
     // HEADLINE
     setElCssProps(projectContentHeadline, {
@@ -85,10 +86,5 @@ export const projectMouseLeaveHandler = () => {
     projectContentTitle.style.bottom = '0';
     projectContentBody.style = '';
     projectContentCta.style = '';
-    // setElCssProps(gridItem, { borderColor: '' });
-    // setElCssProps(projectImage, { opacity: '1' });
-    // setElCssProps(projectContentHeadline, { opacity: '0%', top: '70%' });
-    // setElCssProps(projectContentTitle, { bottom: '0%' });
-    // setElCssProps(projectContentBody, { bottom: '%' });
   }
 };
