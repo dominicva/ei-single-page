@@ -309,6 +309,10 @@
   background-image: url('../media/projects/khan-academy-logo.svg');
 }
 
+#image__neuroscape {
+  background-image: url('../media/projects/neuroscape.jpg');
+}
+
 .image {
   transform: translateY(110%);
   background-size: contain;
