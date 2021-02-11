@@ -313,6 +313,14 @@
   background-image: url('../media/projects/neuroscape.jpg');
 }
 
+#image__give-directly {
+  background-image: url('../media/projects/give-directly.jpeg');
+}
+
+#image__free-code-camp {
+  background-image: url('../media/projects/free-code-camp.svg');
+}
+
 .image {
   transform: translateY(110%);
   background-size: contain;

@@ -1,25 +1,8 @@
-export const gridItemContainer = document.querySelector(
+export const gridItemContainers = document.querySelectorAll(
   '.project-grid__grid-item-container'
 );
-
-export const gridItem = document.querySelector('.project-grid__grid__item');
-
-export const projectImage = document.querySelector('.project-grid__image');
-
-export const projectContentTitle = document.querySelector(
-  '.project-grid__content__title'
-);
-
-export const projectContentHeadline = document.querySelector(
-  '.project-grid__content__headline'
-);
-
-export const projectContentBody = document.querySelector(
-  '.project-grid__content__body'
-);
-
-export const projectContentCta = document.querySelector(
-  '.project-grid__content__cta'
+export const projectGridItems = document.querySelectorAll(
+  '.project-grid__grid__item'
 );
 
 const setElCssProps = (element, props) => {
@@ -28,27 +11,31 @@ const setElCssProps = (element, props) => {
   }
 };
 
-export const projectMouseEnterHandler = () => {
+export const projectMouseEnterHandler = event => {
   if (window.innerWidth >= 1024) {
-    setElCssProps(gridItem, { borderColor: '#0053d6' });
-    // setElCssProps(gridItem, { borderColor: '#ffb300' });
-    setElCssProps(projectImage, { opacity: '0' });
-    // HEADLINE
-    setElCssProps(projectContentHeadline, {
-      display: 'block',
-      position: 'absolute',
-      top: '70%',
-      paddingLeft: '24px',
+    setElCssProps(event.target.firstElementChild, { borderColor: '#0053d6' });
+    setElCssProps(event.target.querySelector('.project-grid__image'), {
+      opacity: '0',
     });
+    // HEADLINE
+    setElCssProps(
+      event.target.querySelector('.project-grid__content__headline'),
+      {
+        display: 'block',
+        position: 'absolute',
+        top: '70%',
+        paddingLeft: '24px',
+      }
+    );
     // BODY
-    setElCssProps(projectContentBody, {
+    setElCssProps(event.target.querySelector('.project-grid__content__body'), {
       display: 'block',
       position: 'absolute',
       bottom: '0%',
       paddingLeft: '24px',
     });
     // CTA
-    setElCssProps(projectContentCta, {
+    setElCssProps(event.target.querySelector('.project-grid__content__cta'), {
       display: 'flex',
       position: 'absolute',
       bottom: '-100%',
@@ -59,18 +46,27 @@ export const projectMouseEnterHandler = () => {
 
     const delay = 20;
     setTimeout(() => {
-      setElCssProps(projectContentHeadline, {
-        opacity: '1',
-        top: '5%',
-      });
-      setElCssProps(projectContentTitle, {
-        bottom: '60%',
-      });
-      setElCssProps(projectContentBody, {
-        opacity: '1',
-        bottom: '42%',
-      });
-      setElCssProps(projectContentCta, {
+      setElCssProps(
+        event.target.querySelector('.project-grid__content__headline'),
+        {
+          opacity: '1',
+          top: '5%',
+        }
+      );
+      setElCssProps(
+        event.target.querySelector('.project-grid__content__title'),
+        {
+          bottom: '60%',
+        }
+      );
+      setElCssProps(
+        event.target.querySelector('.project-grid__content__body'),
+        {
+          opacity: '1',
+          bottom: '42%',
+        }
+      );
+      setElCssProps(event.target.querySelector('.project-grid__content__cta'), {
         opacity: '1',
         bottom: '5%',
       });
@@ -78,13 +74,14 @@ export const projectMouseEnterHandler = () => {
   }
 };
 
-export const projectMouseLeaveHandler = () => {
+export const projectMouseLeaveHandler = event => {
   if (window.innerWidth >= 1024) {
-    gridItem.style.borderColor = '';
-    projectImage.style.opacity = '1';
-    projectContentHeadline.style = '';
-    projectContentTitle.style.bottom = '0';
-    projectContentBody.style = '';
-    projectContentCta.style = '';
+    event.target.firstElementChild.style.borderColor = '';
+    event.target.querySelector('.project-grid__image').style.opacity = '1';
+    event.target.querySelector('.project-grid__content__headline').style = '';
+    event.target.querySelector('.project-grid__content__title').style.bottom =
+      '0';
+    event.target.querySelector('.project-grid__content__body').style = '';
+    event.target.querySelector('.project-grid__content__cta').style = '';
   }
 };

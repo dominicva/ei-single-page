@@ -1,9 +1,4 @@
-// NB to be converted to querySelectorAll when more images added
-// export const projectImageParallaxer = document.querySelector(
-//   '.project-grid__image__parallaxer'
-// );
-
-export const projectImageParallaxer = document.querySelector(
+export const projectImageParallaxer = document.querySelectorAll(
   '.image-background-image-sizer'
 );
 
@@ -16,7 +11,6 @@ const projectGridImageOptions = {
 export const projectImageParallaxerObserver = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
-      console.log(entry);
       if (entry.isIntersecting) {
         entry.target.firstElementChild.classList.add('slide-in--up');
       }

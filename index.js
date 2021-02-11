@@ -15,7 +15,7 @@ import {
 } from './js/projectsSlideIns';
 
 import {
-  gridItemContainer,
+  gridItemContainers,
   gridItem,
   projectImage,
   projectContentTitle,
@@ -54,11 +54,17 @@ missionTextObserver.observe(missionTextEl);
 // PROJECTS SECTION INTERSECTION OBSERVERS
 typeWriterObserver.observe(projectsHeaderTitle);
 
-// **NB to be converted to querySelectorAll when more images added**
-projectImageParallaxerObserver.observe(projectImageParallaxer);
+for (const image of projectImageParallaxer) {
+  projectImageParallaxerObserver.observe(image);
+}
 
-gridItemContainer.addEventListener('mouseenter', projectMouseEnterHandler);
-gridItemContainer.addEventListener('mouseleave', projectMouseLeaveHandler);
+console.log(gridItemContainers);
+for (const item of gridItemContainers) {
+  item.addEventListener('mouseenter', projectMouseEnterHandler);
+  item.addEventListener('mouseleave', projectMouseLeaveHandler);
+}
+//   gridItemContainer.addEventListener('mouseenter', projectMouseEnterHandler);
+// gridItemContainer.addEventListener('mouseleave', projectMouseLeaveHandler);
 
-window.addEventListener('resize', emailInputPlaceholderHandler);
-window.addEventListener('load', emailInputPlaceholderHandler);
+// window.addEventListener('resize', emailInputPlaceholderHandler);
+// window.addEventListener('load', emailInputPlaceholderHandler);
