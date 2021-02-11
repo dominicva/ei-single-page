@@ -66,6 +66,10 @@
   outline-style: none;
 }
 
+.header__button:hover {
+  opacity: 0.87;
+}
+
 @media (min-width: 768px) {
   .header__button {
     font-size: 1rem;
