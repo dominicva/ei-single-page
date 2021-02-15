@@ -63,7 +63,7 @@ export const projectMouseEnterHandler = event => {
         event.target.querySelector('.project-grid__content__body'),
         {
           opacity: '1',
-          bottom: '35%',
+          bottom: '30%',
         }
       );
       setElCssProps(event.target.querySelector('.project-grid__content__cta'), {
