@@ -14,19 +14,7 @@ import {
   projectImageParallaxerObserver,
 } from './js/projectsSlideIns';
 
-import {
-  gridItemContainers,
-  gridItem,
-  projectImage,
-  projectContentTitle,
-  projectContentHeadline,
-  projectContentBody,
-  projectContentCta,
-  projectMouseEnterHandler,
-  projectMouseLeaveHandler,
-} from './js/projectsGrid';
-
-// import { emailInputPlaceholderHandler } from './js/footer';
+// import { containers, imageCollapseHandler } from './js/projectHover';
 
 import { lastScroll, headerScrollHandler } from './js/headerScroll';
 
@@ -58,13 +46,32 @@ for (const image of projectImageParallaxer) {
   projectImageParallaxerObserver.observe(image);
 }
 
-console.log(gridItemContainers);
-for (const item of gridItemContainers) {
-  item.addEventListener('mouseenter', projectMouseEnterHandler);
-  item.addEventListener('mouseleave', projectMouseLeaveHandler);
-}
-//   gridItemContainer.addEventListener('mouseenter', projectMouseEnterHandler);
-// gridItemContainer.addEventListener('mouseleave', projectMouseLeaveHandler);
+const containersArray = Array.from(
+  document.querySelectorAll('.grid-item__container')
+).slice(1);
 
-// window.addEventListener('resize', emailInputPlaceholderHandler);
-// window.addEventListener('load', emailInputPlaceholderHandler);
+function imageCollapseHandler(image) {
+  image.classList.contains('collapse')
+    ? image.classList.remove('collapse')
+    : image.classList.add('collapse');
+}
+
+function imageTitleHandler(imageTitle) {
+  imageTitle.classList.contains('fade-out')
+    ? imageTitle.classList.remove('fade-out')
+    : imageTitle.classList.add('fade-out');
+}
+
+function projectHoverHandler() {
+  const image = event.currentTarget.querySelector('.grid-item__image');
+  const imageTitle = event.currentTarget.querySelector(
+    '.grid-item__image__title'
+  );
+  imageCollapseHandler(image);
+  imageTitleHandler(imageTitle);
+}
+
+for (const container of containersArray) {
+  container.addEventListener('mouseenter', projectHoverHandler);
+  container.addEventListener('mouseleave', projectHoverHandler);
+}

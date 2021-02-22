@@ -1,5 +1,5 @@
 export const projectsHeaderTitle = document.querySelector(
-  '.project-grid__header__title'
+  '.grid__header__title'
 );
 
 // initialise parameters and helper vars

@@ -18,30 +18,9 @@ export const projectMouseEnterHandler = event => {
       opacity: '0',
     });
     // HEADLINE
-    setElCssProps(
-      event.target.querySelector('.project-grid__content__headline'),
-      {
-        display: 'block',
-        position: 'absolute',
-        top: '70%',
-        paddingLeft: '24px',
-      }
-    );
-    // BODY
-    setElCssProps(event.target.querySelector('.project-grid__content__body'), {
-      display: 'block',
-      position: 'absolute',
-      bottom: '0%',
+    setElCssProps(event.target.querySelector('.project-grid__content'), {
+      transform: 'translateY(0px)',
       paddingLeft: '24px',
-    });
-    // CTA
-    setElCssProps(event.target.querySelector('.project-grid__content__cta'), {
-      display: 'flex',
-      position: 'absolute',
-      bottom: '-100%',
-      paddingLeft: '24px',
-      paddingRight: '24px',
-      width: '100%',
     });
 
     const delay = 20;
@@ -50,25 +29,24 @@ export const projectMouseEnterHandler = event => {
         event.target.querySelector('.project-grid__content__headline'),
         {
           opacity: '1',
-          top: '5%',
+          transform: 'translateY(0px)',
         }
       );
       setElCssProps(
         event.target.querySelector('.project-grid__content__title'),
         {
-          bottom: '60%',
+          'grid-row-start': '2',
+          'grid-row-end': '4',
         }
       );
       setElCssProps(
         event.target.querySelector('.project-grid__content__body'),
         {
           opacity: '1',
-          bottom: '30%',
         }
       );
       setElCssProps(event.target.querySelector('.project-grid__content__cta'), {
         opacity: '1',
-        bottom: '5%',
       });
     }, delay);
   }
@@ -81,6 +59,12 @@ export const projectMouseLeaveHandler = event => {
     event.target.querySelector('.project-grid__content__headline').style = '';
     event.target.querySelector('.project-grid__content__title').style.bottom =
       '0';
+    event.target.querySelector(
+      '.project-grid__content__title'
+    ).style.gridRowStart = '8';
+    event.target.querySelector(
+      '.project-grid__content__title'
+    ).style.gridRowEnd = '8';
     event.target.querySelector('.project-grid__content__body').style = '';
     event.target.querySelector('.project-grid__content__cta').style = '';
   }
