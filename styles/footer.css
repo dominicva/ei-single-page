@@ -34,7 +34,7 @@
     padding-bottom: 64px;
     padding-top: 64px;
     width: 100%;
-    max-width: 1368px;
+    max-width: 1112px;
     align-items: baseline;
   }
 }
@@ -87,6 +87,12 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .footer__nav {
+    justify-self: end;
+  }
+}
+
 .footer__links__column__title {
   color: var(--pure-white);
   text-transform: uppercase;
@@ -118,6 +124,7 @@
   font-weight: 400;
   letter-spacing: 0.3px;
   transition: 0.1s opacity ease-out;
+  overflow-wrap: anywhere;
 }
 
 .footer__link:hover,
