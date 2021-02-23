@@ -12,6 +12,10 @@
   border-bottom: 1px solid var(--accent-color);
 }
 
+.grid-item__container:nth-of-type(n + 2):hover {
+  cursor: pointer;
+}
+
 /* GRID HEADER */
 .grid__header__title {
   font: 1.25rem/2rem var(--heading-font);
@@ -40,25 +44,24 @@
 }
 
 .grid-item__image#image__mass-gen {
-  background: url('../media/projects/mass-gen.png') no-repeat center/contain;
+  background: url('../media/projects/mass-gen.png') no-repeat center/cover;
 }
 .grid-item__image#image__khan-academy {
   background: url('../media/projects/khan-academy-logo.svg') no-repeat
-    center/contain;
+    center/cover;
 }
 .grid-item__image#image__neuroscape {
   background: url('../media/projects/neuroscape.jpg') no-repeat center/cover;
 }
 .grid-item__image#image__give-directly {
   background: url('../media/projects/givedirectly-logo.png') no-repeat
-    center/contain;
+    center/cover;
 }
 .grid-item__image#image__freecodecamp {
-  background: url('../media/projects/free-code-camp.svg') no-repeat
-    center/contain;
+  background: url('../media/projects/free-code-camp.svg') no-repeat center/cover;
 }
 .grid-item__image#image__unitedgmh {
-  background: url('../media/projects/ugmh.gif') no-repeat center/contain;
+  background: url('../media/projects/ugmh.gif') no-repeat center/cover;
 }
 
 .grid-item__image__title {

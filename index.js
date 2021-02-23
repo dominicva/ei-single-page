@@ -53,12 +53,12 @@ const containersArray = Array.from(
 function imageCollapseHandler(image) {
   if (image.classList.contains('collapse')) {
     image.classList.remove('collapse');
-    image.style.backgroundImage = '';
+    // image.style.backgroundImage = '';
   } else {
     image.classList.add('collapse');
-    setTimeout(function removeBgImage() {
-      image.style.backgroundImage = 'unset';
-    }, 25);
+    // setTimeout(function removeBgImage() {
+    //   image.style.backgroundImage = 'unset';
+    // }, 25);
   }
 }
 
@@ -75,13 +75,19 @@ function hoverBorderHandler(eventTarget) {
 }
 
 function projectHoverHandler(event) {
-  const image = event.currentTarget.querySelector('.grid-item__image');
-  const imageTitle = event.currentTarget.querySelector(
-    '.grid-item__image__title'
-  );
-  imageCollapseHandler(image);
-  imageTitleHandler(imageTitle);
-  hoverBorderHandler(event.currentTarget);
+  if (window.innerWidth >= 1024) {
+    const image = event.currentTarget.querySelector('.grid-item__image');
+    const imageTitle = event.currentTarget.querySelector(
+      '.grid-item__image__title'
+    );
+    setTimeout(() => {
+      imageCollapseHandler(image);
+      imageTitleHandler(imageTitle);
+    }, 140);
+    hoverBorderHandler(event.currentTarget);
+  } else {
+    return;
+  }
 }
 
 for (const container of containersArray) {
