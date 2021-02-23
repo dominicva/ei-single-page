@@ -9,14 +9,16 @@ grid
 
 .grid {
   display: grid;
-  row-gap: 2rem;
-  margin: 2rem 1rem;
+  row-gap: 4rem;
+  margin: 3rem 1.5rem 6rem 1.5rem;
 }
 
 /* CONTAINER FOR ALL GRID ELEMENTS */
 .grid-item__container:nth-of-type(n + 2) {
   height: 35rem;
   overflow: hidden;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--accent-color);
 }
 
 /* GRID HEADER */
@@ -36,6 +38,7 @@ grid
 
 /* GRID ITEMS – PROJECTS */
 .grid-item__anchor {
+  display: block;
   height: 100%;
 }
 
@@ -67,10 +70,11 @@ grid
 }
 
 .grid-item__content {
+  position: relative;
   height: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .grid-item__content__headline {
@@ -79,12 +83,103 @@ grid
   font-weight: 400;
   text-transform: capitalize;
   letter-spacing: 0.5px;
+  margin: 1.5rem 0 0 0;
+}
+
+.grid-item__content__title {
+  font: 400 1.125rem/1.75rem var(--heading-font);
+  margin: 2rem 0 0 0;
+}
+
+.grid-item__content__body {
+  margin: 1rem 0 0 0;
+}
+
+.grid-item__content__cta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  font: 500 0.75rem/1.25rem var(--heading-font);
+  letter-spacing: 0.5px;
 }
 
 /* MEDIA QUERIES */
+@media (min-width: 460px) {
+  .grid {
+    margin: 4rem 1.5rem 7rem 1.5rem;
+  }
+  .grid-item__container:nth-of-type(n + 2) {
+    /* height: 40rem; */
+  }
+
+  .grid__header__title {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+
+  .grid-item__content__headline {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+
+  .grid-item__content__title {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  .grid__header__body {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    margin: 4rem 2rem 7rem 2rem;
+    row-gap: 5rem;
+  }
+
+  .grid-item__container:nth-of-type(n + 2) {
+    height: 40rem;
+  }
+
+  .grid__header__title {
+    font-size: 2.5rem;
+    line-height: 4rem;
+  }
+
+  .grid-item__image {
+    height: 60%;
+  }
+
+  .grid-item__content {
+    height: 40%;
+  }
+
+  .grid-item__content__title {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    margin: 4rem 5rem 7rem 5rem;
+  }
+
+  .grid-item__container:first-of-type {
+    align-self: center;
+  }
+
+  .grid-item__container:nth-of-type(n + 2) {
+    height: 25rem;
   }
 
   .grid-item__image {
