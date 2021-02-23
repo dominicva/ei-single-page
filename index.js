@@ -62,13 +62,20 @@ function imageTitleHandler(imageTitle) {
     : imageTitle.classList.add('fade-out');
 }
 
-function projectHoverHandler() {
+function hoverBorderHandler(eventTarget) {
+  eventTarget.classList.contains('border-in')
+    ? eventTarget.classList.remove('border-in')
+    : eventTarget.classList.add('border-in');
+}
+
+function projectHoverHandler(event) {
   const image = event.currentTarget.querySelector('.grid-item__image');
   const imageTitle = event.currentTarget.querySelector(
     '.grid-item__image__title'
   );
   imageCollapseHandler(image);
   imageTitleHandler(imageTitle);
+  hoverBorderHandler(event.currentTarget);
 }
 
 for (const container of containersArray) {

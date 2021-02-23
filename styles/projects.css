@@ -174,12 +174,18 @@ grid
     margin: 4rem 5rem 7rem 5rem;
   }
 
+  .grid-item__container {
+    padding: 1rem;
+  }
+
   .grid-item__container:first-of-type {
     align-self: center;
   }
 
   .grid-item__container:nth-of-type(n + 2) {
     height: 25rem;
+    border-bottom: none;
+    transition: 0.5s border var(--border-fade-in);
   }
 
   .grid-item__image {
@@ -207,4 +213,6 @@ KEEP AT BOTTOM OF FILE FOR CASCADE
   opacity: 0;
 }
 
-/* ANIMATIONS */
+.border-in {
+  border: 1px solid var(--accent-color) !important;
+}
