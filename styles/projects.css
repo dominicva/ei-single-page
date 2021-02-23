@@ -39,13 +39,26 @@
   transition: 0.5s height var(--slide-up);
 }
 
+.grid-item__image#image__mass-gen {
+  background: url('../media/projects/mass-gen.png') no-repeat center/contain;
+}
 .grid-item__image#image__khan-academy {
   background: url('../media/projects/khan-academy-logo.svg') no-repeat
     center/contain;
 }
-
 .grid-item__image#image__neuroscape {
   background: url('../media/projects/neuroscape.jpg') no-repeat center/cover;
+}
+.grid-item__image#image__give-directly {
+  background: url('../media/projects/givedirectly-logo.png') no-repeat
+    center/contain;
+}
+.grid-item__image#image__freecodecamp {
+  background: url('../media/projects/free-code-camp.svg') no-repeat
+    center/contain;
+}
+.grid-item__image#image__unitedgmh {
+  background: url('../media/projects/ugmh.gif') no-repeat center/contain;
 }
 
 .grid-item__image__title {
@@ -110,9 +123,6 @@
 @media (min-width: 460px) {
   .grid {
     margin: 4rem 1.5rem 7rem 1.5rem;
-  }
-  .grid-item__container:nth-of-type(n + 2) {
-    /* height: 40rem; */
   }
 
   .grid__header__title {

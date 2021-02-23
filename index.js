@@ -51,9 +51,15 @@ const containersArray = Array.from(
 ).slice(1);
 
 function imageCollapseHandler(image) {
-  image.classList.contains('collapse')
-    ? image.classList.remove('collapse')
-    : image.classList.add('collapse');
+  if (image.classList.contains('collapse')) {
+    image.classList.remove('collapse');
+    image.style.backgroundImage = '';
+  } else {
+    image.classList.add('collapse');
+    setTimeout(function removeBgImage() {
+      image.style.backgroundImage = 'unset';
+    }, 25);
+  }
 }
 
 function imageTitleHandler(imageTitle) {
