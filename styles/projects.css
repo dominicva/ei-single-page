@@ -28,7 +28,6 @@
   margin: 0;
   transform: translateY(120%);
   opacity: 0;
-  animation: effects-system-up 0.5s var(--slide-up) forwards normal;
 }
 
 /* GRID ITEMS – PROJECTS */

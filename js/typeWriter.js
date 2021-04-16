@@ -28,6 +28,10 @@ export const typeWriterObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.intersectionRatio == 1) {
       typeWriter();
+      setTimeout(function bodyTextAnimate() {
+        document.querySelector('.grid__header__body').style.animation =
+          'effects-system-up 0.5s var(--slide-up) forwards normal';
+      }, 500);
     }
   });
 }, options);

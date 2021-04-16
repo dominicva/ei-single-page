@@ -9,14 +9,7 @@ import {
   missionTextObserver,
 } from './js/heroSlideIns';
 
-import {
-  projectImageParallaxer,
-  projectImageParallaxerObserver,
-} from './js/projectsSlideIns';
-
-// import { containers, imageCollapseHandler } from './js/projectHover';
-
-import { lastScroll, headerScrollHandler } from './js/headerScroll';
+import { headerScrollHandler } from './js/headerScroll';
 
 import { headerBtn, toggleMenuHandler, navItems, headerNav } from './js/header';
 
@@ -41,10 +34,6 @@ missionTextObserver.observe(missionTextEl);
 
 // PROJECTS SECTION INTERSECTION OBSERVERS
 typeWriterObserver.observe(projectsHeaderTitle);
-
-for (const image of projectImageParallaxer) {
-  projectImageParallaxerObserver.observe(image);
-}
 
 const containersArray = Array.from(
   document.querySelectorAll('.grid-item__container')

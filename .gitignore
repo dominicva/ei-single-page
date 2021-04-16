@@ -2,5 +2,7 @@
 media/.DS_Store
 node_modules
 .cache
-dist
+dist/
 ei.code-workspace
+.prettierrc
+.firebase/
