@@ -6,3 +6,4 @@ dist/
 ei.code-workspace
 .prettierrc
 .firebase/
+.firebaserc
