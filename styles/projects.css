@@ -43,7 +43,8 @@
 }
 
 .grid-item__image#image__mass-gen {
-  background: url('../media/projects/mass-gen.png') no-repeat center/cover;
+  background: url('../media/projects/cnp.jpeg') no-repeat center/cover;
+  background-size: 100%;
 }
 .grid-item__image#image__khan-academy {
   background: url('../media/projects/khan-academy-logo.svg') no-repeat
@@ -59,8 +60,16 @@
 .grid-item__image#image__freecodecamp {
   background: url('../media/projects/free-code-camp.svg') no-repeat center/cover;
 }
+
 .grid-item__image#image__unitedgmh {
   background: url('../media/projects/ugmh.gif') no-repeat center/cover;
+}
+
+.grid-item__image {
+  /* temporary hack to avoid having to fiddle with 
+    the image selectors above
+   */
+  background-size: 100% !important; 
 }
 
 .grid-item__image__title {
@@ -120,6 +129,10 @@
   .grid-item__container:nth-of-type(n + 2) {
     height: 40rem;
   }
+
+  /* .grid-item__image {
+    height: 30%;
+  } */
 }
 
 @media (min-width: 460px) {

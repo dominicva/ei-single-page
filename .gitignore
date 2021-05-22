@@ -1,6 +1,6 @@
 .DS_Store
 media/.DS_Store
-node_modules
+node_modules/
 .cache
 dist/
 ei.code-workspace

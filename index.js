@@ -42,12 +42,8 @@ const containersArray = Array.from(
 function imageCollapseHandler(image) {
   if (image.classList.contains('collapse')) {
     image.classList.remove('collapse');
-    // image.style.backgroundImage = '';
   } else {
     image.classList.add('collapse');
-    // setTimeout(function removeBgImage() {
-    //   image.style.backgroundImage = 'unset';
-    // }, 25);
   }
 }
 
@@ -72,7 +68,7 @@ function projectHoverHandler(event) {
     setTimeout(() => {
       imageCollapseHandler(image);
       imageTitleHandler(imageTitle);
-    }, 140);
+    }, 100);
     hoverBorderHandler(event.currentTarget);
   } else {
     return;
